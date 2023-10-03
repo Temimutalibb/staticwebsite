@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.cache/
+testing.html
+transform.html

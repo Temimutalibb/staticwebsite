@@ -1,0 +1,16 @@
+{
+  "name": "staticwebsite",
+  "version": "1.0.0",
+  "description": "A simple static website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Mutalibb",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31"
+  }
+}
