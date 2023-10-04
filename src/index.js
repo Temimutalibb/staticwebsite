@@ -17,44 +17,37 @@ const textP = document.querySelector(".backimage p");
 const imageBlock = document.querySelector(".imageblock");
 const cite = document.querySelector(".backimage cite");
 
-
 const images = [
-"mutalibbone.jpeg",
-"mutalibbtwo.jpeg",
-"mutalibbthree.jpeg",
-"mutalibbfour.jpeg"
+  "mutalibbone.jpeg",
+  "mutalibbtwo.jpeg",
+  "mutalibbthree.jpeg",
+  "mutalibbfour.jpeg",
 ];
- const texts = [
+const texts = [
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi",
-  "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi"
- ];
+  "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi",
+];
 
-const cites = [
-"-Adams Gabriel",
-"-J. wonah",
-"-W.A. Wale",
-"-Mr. Lay"
-];
+const cites = ["-Adams Gabriel", "-J. wonah", "-W.A. Wale", "-Mr. Lay"];
 let imageIndex = 0;
 
 // display before the function
 imageBlock.innerHTML = `<img src="${images[imageIndex]}"
   alt ="image">`;
 
-textP.innerHTML = `${texts[imageIndex]}`
- cite.textContent = `${cites[imageIndex]}`
+textP.innerHTML = `${texts[imageIndex]}`;
+cite.textContent = `${cites[imageIndex]}`;
 
 //function for right box animation
-function changeImage(){
-  imageIndex =(imageIndex + 1) % images.length;
+function changeImage() {
+  imageIndex = (imageIndex + 1) % images.length;
 
   imageBlock.innerHTML = `<img src="${images[imageIndex]}"
   alt ="image">`;
- textP.innerHTML = `${texts[imageIndex]}`
-cite.textContent = `${cites[imageIndex]}`
-
+  textP.innerHTML = `${texts[imageIndex]}`;
+  cite.textContent = `${cites[imageIndex]}`;
 }
 setInterval(changeImage, 10000);
 //rigth side imaging poping stops here

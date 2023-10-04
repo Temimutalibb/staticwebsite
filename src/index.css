@@ -146,13 +146,13 @@ header :nth-child(2) {
 }
 
 @keyframes flowInOut {
-  0%{
+  0% {
     transform: translateX(110%);
   }
-  50%{
+  50% {
     transform: translateX(0%);
   }
-  100%{
+  100% {
     transform: translateX(110%);
   }
 }
@@ -286,7 +286,6 @@ footer > div:hover {
   padding-top: 50px;
   display: none;
 }
-
 
 .cleaning_process_box li {
   padding: 10px;
