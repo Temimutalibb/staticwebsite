@@ -123,11 +123,38 @@ header :nth-child(2) {
 .backimage P {
   text-align: center;
   overflow: hidden;
+  animation: flowInOut 10s ease-in-out infinite alternate;
 }
 .backimage img {
   border-radius: 50%;
   width: 100px;
   margin: 15%;
+  animation: fadeInOut 10s ease-in-out infinite alternate;
+  opacity: 0;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flowInOut {
+  0%{
+    transform: translateX(110%);
+  }
+  50%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(110%);
+  }
 }
 .step-two {
   grid-column: 1/4;

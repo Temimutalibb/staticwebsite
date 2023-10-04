@@ -13,34 +13,45 @@ const close_estimate = document.querySelector("#close_estimate");
 
 //for right side image popping up
 const backimage = document.querySelector(".backimage");
-const oneText = document.querySelector(".backimage p");
-const img = document.querySelector(".backimage img");
+const textP = document.querySelector(".backimage p");
+const imageBlock = document.querySelector(".imageblock");
 const cite = document.querySelector(".backimage cite");
 const q = document.createElement("q");
-oneText.appendChild(q);
+textP.appendChild(q);
 
 q.textContent = "";
 
-setTimeout(() => {
-  img.src = "pexels-photo-209230.jpeg";
-  q.textContent =
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi ";
-  cite.textContent = "-Adams Gabriel";
-}, 1000);
+const images = [
+"mutalibbone.jpeg",
+"mutalibbtwo.jpeg",
+"mutalibbthree.jpeg",
+"mutalibbfour.jpeg"
+];
+ const texts = [
+  "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi",
+  "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi",
+  "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi",
+  "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi"
+ ];
 
-setTimeout(() => {
-  img.src = "pexels-photo-713297.jpeg";
-  q.textContent =
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi ";
-  cite.textContent = "-Wunmi Jacob";
-}, 7000);
+const cites = [
+"-Adams Gabriel",
+"-J. wonah",
+"-W.A. Wale",
+"-Mr. Lay"
+];
+let imageIndex = 0;
 
-setTimeout(() => {
-  img.src = "pexels-photo-6195292.webp";
-  q.textContent =
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit Perferendis, doloribus. Ea iure placeat, provident ducimus porro inventore vero deleniti sit consectetur exercitationem et molestias eligendi ";
-  cite.textContent = "-W.A. Wale";
-}, 10000);
+function changeImage(){
+  imageBlock.innerHTML = `<img src="${images[imageIndex]}"
+  alt ="image">`;
+  q.textContent = `${texts[imageIndex]}`
+  cite.textContent = `${cites[imageIndex]}`
+
+
+  imageIndex =(imageIndex + 1) % images.length;
+}
+setInterval(changeImage, 10000);
 //rigth side imaging poping stops here
 
 cleanServiceBox.style.display = "none";
