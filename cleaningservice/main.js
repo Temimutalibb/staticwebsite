@@ -1,3 +1,5 @@
+import './style.css';
+
 const cleanServiceBox = document.querySelector(".cleaning_service_box");
 const cleanProcessBox = document.querySelector(".cleaning_process_box");
 const contactBox = document.querySelector(".contact_box");
@@ -15,7 +17,10 @@ const close_estimate = document.querySelector("#close_estimate");
 const backimage = document.querySelector(".backimage");
 const textP = document.querySelector(".backimage p");
 const imageBlock = document.querySelector(".imageblock");
+let imageBlockImg = document.querySelector(".imageblocking");   
 const cite = document.querySelector(".backimage cite");
+
+
 
 const images = [
   "mutalibbone.jpeg",
@@ -31,26 +36,23 @@ const texts = [
 ];
 
 const cites = ["-Adams Gabriel", "-J. wonah", "-W.A. Wale", "-Mr. Lay"];
+
 let imageIndex = 0;
+textP.innerHTML = `${texts[0]}`;
+cite.textContent = `${cites[0]}`;
 
-// display before the function
-imageBlock.innerHTML = `<img src="${images[imageIndex]}"
-  alt ="image">`;
-
-textP.innerHTML = `${texts[imageIndex]}`;
-cite.textContent = `${cites[imageIndex]}`;
 
 //function for right box animation
 function changeImage() {
   imageIndex = (imageIndex + 1) % images.length;
 
-  imageBlock.innerHTML = `<img src="${images[imageIndex]}"
-  alt ="image">`;
+  imageBlockImg.src = `${images[imageIndex]}`;
   textP.innerHTML = `${texts[imageIndex]}`;
   cite.textContent = `${cites[imageIndex]}`;
 }
 setInterval(changeImage, 10000);
 //rigth side imaging poping stops here
+
 
 cleanServiceBox.style.display = "none";
 cleanProcessBox.style.display = "none";
@@ -84,3 +86,8 @@ boxShow(cleanService, cleanServiceBox, close_service);
 boxShow(cleanProcess, cleanProcessBox, close_process);
 boxShow(contact, contactBox, close_contact);
 boxShow(estimate, estimateBox, close_estimate);
+
+
+
+
+

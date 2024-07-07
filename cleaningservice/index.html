@@ -1,11 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale =1.0">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>king clean</title>
-    <link rel="stylesheet" href="/src.9ad09f98.css">
-    <script src="/src.e31bb0bc.js" defer=""></script>
-  <script src="/src.9ad09f98.js"></script></head>
+  </head>
   <body>
     <div class="container">
       <nav>
@@ -15,7 +16,7 @@
           <a href="#about">About Us</a>
         </div>
         <div class="contact">Contact</div>
-        <div class="estimate">Request an Estimate</div>
+        <div class="estimate" id="estimate">Request an Estimate</div>
       </nav>
       <header>
         <div>King's Clean</div>
@@ -27,19 +28,25 @@
           <div class="image">
             <p>our services</p>
             <div class="one">
-              <img src="/cleaning-washing-cleanup-the-ilo-48889.9d4ad84b.jpeg" alt="ourservice image">
+              <img
+                src="cleaning-washing-cleanup-the-ilo-48889.jpeg"
+                alt="ourservice image"
+              />
               <span class="one_span">Residence cleaning </span>
             </div>
             <div class="two">
-              <img src="/istockphoto-1404640594-612x612.17bdae54.webp" alt="ourservice image">
+              <img
+                src="istockphoto-1404640594-612x612.webp"
+                alt="ourservice image"
+              />
               <span class="one_span">Commercial cleaning</span>
             </div>
             <div class="three">
-              <img src="/pexels-photo-209230.15301508.jpeg" alt="ourservice image">
+              <img src="pexels-photo-209230.jpeg" alt="ourservice image" />
               <span class="one_span">Deep cleaning</span>
             </div>
             <div class="four">
-              <img src="/pexels-photo-6197122.2f8895e9.webp" alt="ourservice image">
+              <img src="pexels-photo-6197122.webp" alt="ourservice image" />
               <span class="one_span">post construction cleaning </span>
             </div>
           </div>
@@ -70,8 +77,11 @@
         <div class="right-side">
           <div class="backimage">
             <div style="text-align: center">Testimonies</div>
-            <img src="">
-            <p></p>
+            <div class="imageblock">
+              <img  src ="./mutalibbone.jpeg" class= "imageblocking"  alt ="image">
+            </div>
+            
+            <p></p> 
             <cite></cite>
           </div>
         </div>
@@ -113,19 +123,19 @@
         </div>
       </div>
       <div class="request">
-        <div>REQUEST A QUOTE</div>
+        <div id="quote"><a href ="#estimate">REQUEST A QUOTE</a></div>
         <div>CALL US: 9037660869</div>
       </div>
 
       <footer>
-        <div><a href="#">About us</a></div>
+        <div><a href="https://dev.to/mutalibb/kings-clean-5781">About</a></div>
         <div><a href="#">Services</a></div>
         <div><a href="#">Contact</a></div>
         <div><a href="#">Request an Estimate</a></div>
         <div><a href="#">Private Policy</a></div>
       </footer>
     </div>
-    <hr>
+    <hr />
 
     <!--cleaning button pop up-->
     <div class="cleaning_service_box">
@@ -180,36 +190,38 @@
       <span class="close" id="close_contact" title="close">X</span>
       <div>
         <p>Phone:</p>
-        <br>+*** *** *****
+        <br />+*** *** *****
       </div>
       <div>
         <p>Fax:</p>
-        <br>******* **** **
+        <br />******* **** **
       </div>
       <div>
         <p>Email:</p>
-        <br>******* **** **
+        <br />******* **** **
       </div>
       <div>
         <p>Social:</p>
-        <br>
-        <img src="" alt="telegram">
-        <img src="" alt="whatsApp">
-        <img src="" alt="facebook">
-        <img src="" alt="telegram">
-        <img src="" alt="twitter">
+        <br />
+        <div class="socialimage">
+       <a href="#"><img src="./img/facebook.jpg" alt="telegram"/></a>
+       <a href="#"><img src="./img/telegram.jpg" alt="whatsApp" /></a>
+       <a href="#"><img src="./img/twitter.jpg" alt="facebook" /></a>
+       <a href="#"><img src="./img/whatsapp.jpg" alt="telegram" /></a>
+      </div>
       </div>
     </div>
 
     <div class="estimate_box">
       <span class="close" id="close_estimate" title="close">X</span>
-      <form>
-        <input type="text" name="name" placeholder="Name"><br>
-        <input type="tel" name="phone" placeholder="Phone"><br>
-        <input type="email" name="email" placeholder="Email"><br>
-        <input type="text" name="state" placeholder="City/State"><br>
-        <button type="submit">Get a quote</button><br>
+      <form method="post">
+        <input type="text" name="name" placeholder="Name" /><br />
+        <input type="tel" name="phone" placeholder="Phone" /><br />
+        <input type="email" name="email" placeholder="Email" /><br />
+        <input type="text" name="state" placeholder="City/State" /><br />
+        <button type="submit">Get a quote</button><br />
       </form>
     </div>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
